@@ -8,5 +8,16 @@ npx cypress run --browser=chrome : RUN ALL TESTS FROM TERMINAL IN HEAD MODE (BY 
 
 npx cypress run --spec cypress\e2e\my.test.cy.js : RUN SPECIFIC TESTCASE
 
-   
-      
+ID
+
+tag#id
+
+tag.class
+
+tag[attribute:"value"]
+
+tag.class[attribute:"value"]
+
+XPATH:
+
+npm install -D cypress-xpath
