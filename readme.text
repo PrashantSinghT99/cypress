@@ -8,6 +8,9 @@ npx cypress run --browser=chrome : RUN ALL TESTS FROM TERMINAL IN HEAD MODE (BY 
 
 npx cypress run --spec cypress\e2e\my.test.cy.js : RUN SPECIFIC TESTCASE
 
+
+LOCATORS
+
 ID
 
 tag#id
@@ -21,3 +24,21 @@ tag.class[attribute:"value"]
 XPATH:
 
 npm install -D cypress-xpath
+
+commands.js
+
+/// <reference types="Cypress"/>
+
+/// <reference types="cypress-xpath" />
+
+e2e.js
+
+require('cypress-xpath');
+
+cy.get("css locator")
+cy.xpath
+
+
+implicit explicit assertions
+
+https://docs.cypress.io/guides/references/assertions
