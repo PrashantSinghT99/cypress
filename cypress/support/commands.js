@@ -27,3 +27,17 @@
 /// <reference types="Cypress"/>
 
 /// <reference types="cypress-xpath" />
+
+// Cypress.Commands.add('getIframe',(iframeName)=>
+// {
+// return cy.get(iframeName).its('0.contentDocument.body')
+// .should('be.visible')
+// .then(cy.wrap)
+// })
+
+Cypress.Commands.add('getIframe', (iframeLocator)=>{
+    return cy.get(iframeLocator)
+    .its('0.contentDocument.body')
+    .should('be.visible')
+    .then(cy.wrap);
+})
