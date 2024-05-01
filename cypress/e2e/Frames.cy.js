@@ -18,15 +18,15 @@ describe("iframes validation", () => {
     });
     //made a custom command in commands.js
 
-    it("Using custom command.js", () => {
+    it.only("Using custom command.js", () => {
         cy.visit("https://the-internet.herokuapp.com/iframe");
 
-        cy.getIframe("#mce_0_ifr").clear().type("Hello {ctrl+a}");
+        cy.getCustomIframe("#mce_0_ifr").clear().type("Hello {ctrl+a}");
 
         cy.get("[aria-label='Bold']").click();
     })
 
-    it.only("Using Plugin cypress-iframe", () => {
+    it("Using Plugin cypress-iframe", () => {
         cy.visit("https://the-internet.herokuapp.com/iframe")
         cy.frameLoaded("#mce_0_ifr") //loads the frame 
         cy.getIframe("#mce_0_ifr").clear().type("checking plugin {ctrl+a}")

@@ -35,7 +35,7 @@
 // .then(cy.wrap)
 // })
 
-Cypress.Commands.add('getIframe', (iframeLocator)=>{
+Cypress.Commands.add('getCustomIframe', (iframeLocator)=>{
     return cy.get(iframeLocator)
     .its('0.contentDocument.body')
     .should('be.visible')
