@@ -35,9 +35,37 @@
 // .then(cy.wrap)
 // })
 
-Cypress.Commands.add('getCustomIframe', (iframeLocator)=>{
+// iframe custom command
+Cypress.Commands.add('getCustomIframe', (iframeLocator) => {
     return cy.get(iframeLocator)
-    .its('0.contentDocument.body')
-    .should('be.visible')
-    .then(cy.wrap);
+        .its('0.contentDocument.body')
+        .should('be.visible')
+        .then(cy.wrap);
+})
+
+//Click link on basis of text
+
+Cypress.Commands.add('clickLink', (linkText) => {
+    cy.get('a').contains(linkText).click();
+})
+
+//Over write contains() 
+
+// Cypress.Commands.overwriteQuery('contains', (originalFn, subject, filter, text, options = {}) => {
+//     if (typeof text === 'object') {
+//         options = text;
+//         text = filter;
+//         filter = undefined;
+//     }
+
+//     options.matchCase = false;
+
+//     return originalFn(subject, filter, text, options);
+// });
+
+
+Cypress.Commands.add("loginapp", (username, password) => {
+    cy.get("input[placeholder='Username']").type(username);
+    cy.get("input[placeholder='Password']").type(password);
+    cy.get("button[type='submit']").click();
 })
