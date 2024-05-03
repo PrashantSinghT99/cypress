@@ -83,3 +83,12 @@ CYPRESS XPATH PLUGIN: cypress-xpath
 FILE UPLOAD PLUGIN: cypress-file-upload
 DRAG AND DROP PLUGIN: cypress-drag-drop
 IFRAME PLUGIN: cypress-iframe
+
+NAVIGATION:
+
+cy.go("forward") or cy.go(1)
+cy.go('back) or cy.go(-1)
+
+SCREENSHOT CAPTURING
+
+screenshot() or via terminal run command videos and screenshot gets captured add  video: true, in cypress.config.js

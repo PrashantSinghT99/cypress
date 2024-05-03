@@ -10,7 +10,7 @@ describe("handling tabs approach 1", () => {
     
         cy.url().should("include", "https://the-internet.herokuapp.com/windows/new");
 
-        cy.go('back');
+        cy.go('back'); //cy.go("forward") or cy.go(1) for back cy.go(-1)
     })
 
     it("validation of tabs", () => {
@@ -25,7 +25,7 @@ describe("handling tabs approach 1", () => {
 
         cy.wait(2000);
 
-        cy.go('back');
+        cy.go('back');//cy.go("forward") or cy.go(1) for back cy.go(-1)
 
     })
 })
