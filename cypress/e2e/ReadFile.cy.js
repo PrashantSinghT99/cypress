@@ -7,10 +7,18 @@ describe('Reading a JSON file from fixture', () => {
         });
     });
 
-    it.only('Reads a fixture text file', () => {
+    it('Reads a fixture text file', () => {
         cy.fixture('readfile.txt').then((data) => {
             expect(data).contains("THIS IS TEST 1 TEXT FILE TO VALIDATE FILE UPLOAD");
             console.log(data);
         });
     });
+   
+        it.only('Reads a file', () => {
+          cy.readFile('cypress/fixtures/readfile.txt').then((data) => {
+            expect(data).contains("THIS IS TEST 1 TEXT FILE TO VALIDATE FILE UPLOAD");
+            console.log(data);
+          });
+        });
+ 
 });
