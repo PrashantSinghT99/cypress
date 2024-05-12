@@ -1,5 +1,3 @@
-
-
 describe("handling tabs approach 1", () => {
     it.skip("validation of tabs", () => {
 

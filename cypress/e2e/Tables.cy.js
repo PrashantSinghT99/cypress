@@ -26,7 +26,7 @@ describe('Handle Tables', (() => {
             .contains("gorankrezic90@gmail.com");
     })
 
-    it("get all data from cell", () => {
+    it.only("get all data from cell", () => {
         cy.get("#form-customer > div.table-responsive > table > tbody > tr")
             .each(($row, index, $rows) => {
                 cy.wrap($row).within(() => {
@@ -38,7 +38,7 @@ describe('Handle Tables', (() => {
             })
     })
 
-    it.only("Pagination", () => {
+    it("Pagination", () => {
         //find total number of pages
         /*let totalPages;
         cy.get(".col-sm-6.text-end").then( (e)=>{

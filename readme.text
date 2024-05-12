@@ -92,3 +92,11 @@ cy.go('back) or cy.go(-1)
 SCREENSHOT CAPTURING
 
 screenshot() or via terminal run command videos and screenshot gets captured add  video: true, in cypress.config.js
+
+
+PERSERVE COOKIES
+
+cy.getCookies()
+cy.setCookie()
+cy.clearCookies()
+cy.clearLocalStorage() 

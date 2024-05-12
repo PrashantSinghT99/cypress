@@ -1,5 +1,3 @@
-
-
 describe("Assertions", () => {
 
     it("Implicit assertion test", () => {

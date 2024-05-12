@@ -34,4 +34,5 @@ describe("File Upload", () => {
         cy.get('.smart-item-name', { includeShadowDom: true }).should("have.text",'test1.text');
 
     })
+    //cy.get('#locator').shadow().find('.nb-btn').click()
 })
