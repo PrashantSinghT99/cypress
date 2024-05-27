@@ -11,6 +11,8 @@ describe("test data from fixtures", () => {
     })
     it("fetching data from fixtures", () => {
         cy.visit("https://opensource-demo.orangehrmlive.com/");
+//         const username = Cypress.env('username');
+//   cy.log(username);
         cy.get("input[placeholder='Username']").type(username);
         cy.get("input[placeholder='Password']").type(password);
         cy.get("button[type='submit']").click();

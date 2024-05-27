@@ -8,6 +8,10 @@ npx cypress run --browser=chrome : RUN ALL TESTS FROM TERMINAL IN HEAD MODE (BY 
 
 npx cypress run --spec cypress\e2e\my.test.cy.js : RUN SPECIFIC TESTCASE
 
+npx cypress run --config baseUrl=""
+
+cypress run --env "token"="abc"
+
 
 LOCATORS
 
@@ -101,6 +105,10 @@ cy.setCookie()
 cy.clearCookies()
 cy.clearLocalStorage() 
 
+Cypress.Cookies.preserveOnce("sessionId","remember_");
+
+
+
 IMPLICIT ASSERTIONS
 
 .should("have.length", 5)
@@ -131,3 +139,20 @@ cy.get('.name > h1').then((element) => {
         })
 
 
+Direct
+
+should('eq','')
+should('contain','')
+should('include','')
+
+should('be.visible')
+should('be.checked')
+should('exist')
+should('be.disabled')
+should('be.focused')
+
+
+should('have.length')
+should('have.value')
+should('have.text')
+should('have.contain')

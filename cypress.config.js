@@ -9,6 +9,9 @@ module.exports = defineConfig({
       require('cypress-mochawesome-reporter/plugin')(on);
     },
     video: true,
-  },
+    // "env": {
+    //   "username": "myUsername"
+    // }  
+  }
 });
 
