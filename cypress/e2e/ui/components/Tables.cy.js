@@ -26,7 +26,7 @@ describe('Handle Tables', (() => {
             .contains("gorankrezic90@gmail.com");
     })
 
-    it.only("get all data from cell", () => {
+    it("get all data from cell", () => {
         cy.get("#form-customer > div.table-responsive > table > tbody > tr")
             .each(($row, index, $rows) => {
                 cy.wrap($row).within(() => {

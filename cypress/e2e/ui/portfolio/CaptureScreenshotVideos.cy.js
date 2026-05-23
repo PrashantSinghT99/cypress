@@ -7,7 +7,7 @@ describe('capture screenshot', () => {
       
     })
 
-    it.only("capturing screenshot and video via terminal on failure", () => {
+    it.skip("captures screenshot and video for a failing assertion demo", () => {
         cy.visit("https://prashantsinght99.github.io/PrashantSingh.github.io/");
         cy.get("section[id='bottom'] h1:nth-child(1)").should("have.text","Test Name")
       

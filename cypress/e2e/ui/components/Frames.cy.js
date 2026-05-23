@@ -18,7 +18,7 @@ describe("iframes validation", () => {
     });
     //made a custom command in commands.js
 
-    it.only("Using custom command.js", () => {
+    it("Using custom command.js", () => {
         cy.visit("https://the-internet.herokuapp.com/iframe");
 
         cy.getCustomIframe("#mce_0_ifr").clear().type("Hello {ctrl+a}");

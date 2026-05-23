@@ -1,18 +1,21 @@
 {
-  "name": "cypress",
+  "name": "cypress-automation-portfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "End-to-end and API automation examples built with Cypress.",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:headed": "cypress run --headed",
+    "test": "cypress run",
+    "test:api": "cypress run --spec \"cypress/e2e/api/*.cy.js\"",
+    "test:ui": "cypress run --spec \"cypress/e2e/ui/**/*.cy.js\""
   },
   "author": "prashant",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^13.8.1"
-  },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.5",
+    "cypress": "^13.8.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.8.2",

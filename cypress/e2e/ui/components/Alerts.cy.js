@@ -67,7 +67,7 @@ describe("Alert", () => {
 
     //authentication
 
-    it.only("validation of authentication alert", () => {
+    it("validation of authentication alert", () => {
         //cy.visit("https://the-internet.herokuapp.com/basic_auth",{auth:{username:"admin",password:"admin"}})
         cy.visit("https://admin:admin@the-internet.herokuapp.com/basic_auth")
         cy.get("div[class='example'] p").should("have.contain", "Congratulations");

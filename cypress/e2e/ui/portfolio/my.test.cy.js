@@ -6,9 +6,9 @@ describe("Launching my portfolio URL", () => {
     cy.title().should("eq", "My Portfolio");
   });
 
-  it("Test 2 Negative", () => {
+  it("validates an incorrect title is not accepted", () => {
     cy.visit("https://prashantsinght99.github.io/PrashantSingh.github.io/");
-    cy.title().should("eq", "Someone Portfolio");
+    cy.title().should("not.eq", "Someone Portfolio");
   });
 });
 

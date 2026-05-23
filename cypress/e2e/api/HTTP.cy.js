@@ -1,4 +1,4 @@
-describe("", () => {
+describe("HTTP API examples", () => {
     it("GET", () => {
         cy.request("GET", "https://dummy.restapiexample.com/api/v1/employees")
             .its('status')
@@ -24,7 +24,7 @@ describe("", () => {
             .should('equal', 201);
     })
 
-    it("PUT", () => {
+    it("creates a post before update examples", () => {
         cy.request({
 
             method: 'POST',
@@ -58,7 +58,7 @@ describe("", () => {
             .should('equal', 200);
         })
     
-           it.only("Delete Call", ()=>
+           it("Delete Call", ()=>
            {
                 cy.request({  
                             method: 'DELETE',

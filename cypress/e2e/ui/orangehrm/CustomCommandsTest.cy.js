@@ -3,7 +3,7 @@ describe("custom commands", () => {
         cy.visit("https://prashantsinght99.github.io/PrashantSingh.github.io/");
         cy.clickLink("hosted live version 2");
     })
-    it.only("check", () => {
+    it("check", () => {
         cy.visit("https://demo.nopcommerce.com/");
         cy.clickLink("Apple MacBook Pro 13-inch");
         cy.get("div[class='product-name'] h1").should('have.text', 'Apple MacBook Pro 13-inch');

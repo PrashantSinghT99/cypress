@@ -22,7 +22,7 @@ describe("mouse operations", () => {
         })
     })
 
-    it.only("double click", () => {
+    it("double click", () => {
         //  cy.visit("https://www.plus2net.com/javascript_tutorial/ondblclick-demo2.php");
         // cy.get("#box").dblclick();
         // cy.get("#box").should("have.text","This is double click"); cy.visit("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick3");

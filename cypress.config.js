@@ -1,17 +1,16 @@
 const { defineConfig } = require("cypress");
 
-
 module.exports = defineConfig({
-  reporter: 'cypress-mochawesome-reporter',
+  reporter: "cypress-mochawesome-reporter",
+  screenshotsFolder: "cypress/screenshots",
+  videosFolder: "cypress/videos",
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-      require('cypress-mochawesome-reporter/plugin')(on);
+      require("cypress-mochawesome-reporter/plugin")(on);
+      return config;
     },
     video: true,
-    // "env": {
-    //   "username": "myUsername"
-    // }  
-  }
+    viewportHeight: 900,
+    viewportWidth: 1440,
+  },
 });
-
